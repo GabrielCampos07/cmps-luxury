@@ -1,0 +1,74 @@
+.container {
+  p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #a1a1a1;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .header-1 {
+    display: flex;
+    background-color: black;
+    padding: 6px 18px;
+    gap: 905px;
+
+    .utility-texts {
+      display: flex;
+      gap: 11px;
+    }
+
+    .divider {
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .header-2 {
+    display: flex;
+    align-items: center;
+    padding: 13px 25px;
+    gap: 95px;
+    background: #8a8a8a;
+
+    input {
+      background: #a1a1a1;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      width: 166px;
+      height: 41px;
+      padding-left: 40px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    .menus {
+      display: flex;
+      gap: 47px;
+
+      p {
+        color: black;
+      }
+    }
+
+    .search {
+      position: absolute;
+      left: 1080px;
+    }
+
+    .search-bag {
+      display: flex;
+      align-items: center;
+      gap: 31px;
+    }
+  }
+}

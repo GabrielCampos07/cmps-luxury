@@ -1,0 +1,43 @@
+.container {
+  background-color: black;
+  padding: 45px;
+  display: flex;
+  gap: 85px;
+  justify-content: center;
+
+  h1,
+  p {
+    color: #a1a1a1;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .follow-us-payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
