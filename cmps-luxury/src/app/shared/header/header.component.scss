@@ -15,7 +15,7 @@
     display: flex;
     background-color: black;
     padding: 6px 18px;
-    gap: 905px;
+    justify-content: space-between;
 
     .utility-texts {
       display: flex;
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     padding: 13px 25px;
-    gap: 95px;
+    justify-content: space-between;
     background: #8a8a8a;
 
     input {
@@ -52,8 +52,9 @@
     }
 
     .menus {
+      width: 100%;
       display: flex;
-      gap: 47px;
+      justify-content: space-around;
 
       p {
         color: black;
@@ -62,13 +63,14 @@
 
     .search {
       position: absolute;
-      left: 1080px;
+      left: 1054px;
     }
 
     .search-bag {
+      width: 30%;
       display: flex;
       align-items: center;
-      gap: 31px;
+      justify-content: space-around;
     }
   }
 }
