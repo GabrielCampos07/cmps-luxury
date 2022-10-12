@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +29,20 @@ p {
   font-family: "nunito", sans-serif;
   font-style: normal;
   color: black;
+  font-weight: 700;
+}
+
+button {
+  border-radius: 50px;
+  align-items: center;
+  padding: 10px 39px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #8a8a8a;
+  cursor: pointer;
+
+  p {
+    color: #ffffff;
+  }
 }
 
 input::placeholder {

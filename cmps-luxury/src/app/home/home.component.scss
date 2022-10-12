@@ -7,7 +7,6 @@
 
     h1,
     p {
-      font-weight: 700;
       color: #ffffff;
       text-align: center;
     }
@@ -21,6 +20,73 @@
       font-size: 15px;
       line-height: 20px;
       text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+
+  .banner {
+    .banner-img {
+      width: 100%;
+    }
+
+    button {
+      position: relative;
+      left: 150px;
+      bottom: 260px;
+
+      p {
+        font-size: 24px;
+        line-height: 33px;
+      }
+    }
+
+    .arrow-down {
+      position: relative;
+      bottom: 79px;
+      left: 450px;
+      cursor: pointer;
+      animation: go-back 1s infinite alternate;
+
+      @keyframes go-back {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+
+  .section {
+    padding: 0 23px;
+
+    .texts {
+      text-align: center;
+
+      h1 {
+        font-size: 60px;
+        line-height: 82px;
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+      button {
+        margin-top: 17px;
+        p {
+          font-size: 24px;
+          line-height: 33px;
+        }
+      }
+    }
+  }
+
+  .for-all {
+    h1 {
+      font-size: 40px;
+      line-height: 55px;
     }
   }
 }
