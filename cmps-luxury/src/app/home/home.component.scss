@@ -25,68 +25,117 @@
   }
 
   .banner {
+    position: relative;
     .banner-img {
       width: 100%;
     }
 
-    button {
-      position: relative;
-      left: 150px;
-      bottom: 260px;
+    .arrow-down-container {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
 
+      .arrow-down {
+        position: absolute;
+        bottom: 0px;
+        cursor: pointer;
+        animation: go-back 1s infinite alternate;
+
+        @keyframes go-back {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(20px);
+          }
+        }
+      }
+    }
+  }
+
+  .texts {
+    text-align: center;
+
+    h1 {
+      font-size: 60px;
+      line-height: 82px;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    button {
+      margin-top: 17px;
       p {
         font-size: 24px;
         line-height: 33px;
-      }
-    }
-
-    .arrow-down {
-      position: relative;
-      bottom: 79px;
-      left: 450px;
-      cursor: pointer;
-      animation: go-back 1s infinite alternate;
-
-      @keyframes go-back {
-        from {
-          transform: translateY(0);
-        }
-        to {
-          transform: translateY(20px);
-        }
       }
     }
   }
 
   .section {
     padding: 0 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 
-    .texts {
-      text-align: center;
-
-      h1 {
-        font-size: 60px;
-        line-height: 82px;
-      }
-
-      p {
-        font-size: 30px;
-      }
-
-      button {
-        margin-top: 17px;
-        p {
-          font-size: 24px;
-          line-height: 33px;
-        }
-      }
-    }
-  }
-
-  .for-all {
     h1 {
       font-size: 40px;
       line-height: 55px;
+    }
+
+    .for-all {
+      .models-img {
+        display: flex;
+        gap: 40px;
+
+        .taller-img {
+          height: 865px;
+        }
+
+        .section-img {
+          position: relative;
+
+          button {
+            padding: 5px 39px;
+            p {
+              font-family: "Nunito";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 33px;
+            }
+          }
+
+          .button-side {
+            position: absolute;
+            bottom: 60px;
+            right: 1;
+            left: 30px;
+          }
+
+          .first {
+            bottom: 40px;
+          }
+
+          .button-text {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .text {
+              font-size: 40px;
+              line-height: 55px;
+            }
+          }
+        }
+      }
     }
   }
 }

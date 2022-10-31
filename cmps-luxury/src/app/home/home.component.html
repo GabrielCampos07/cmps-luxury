@@ -4,33 +4,52 @@
     <p>Compre agora</p>
   </div>
   <div class="banner">
-    <img class="banner-img" src="../../assets/img/banner-home.svg" />
-    <button><p>Comprar</p></button>
-    <img
-      class="arrow-down"
-      (click)="scrollDown()"
-      src="../../assets/img/arrow-down.svg"
-    />
+    <img class="banner-img" src="assets/img/banner-home.svg" />
+    <div class="arrow-down-container">
+      <img
+        class="arrow-down"
+        (click)="scrollDown()"
+        src="assets/img/arrow-down.svg"
+      />
+    </div>
+  </div>
+  <div class="texts">
+    <h1>UM NOVO CONCEITO</h1>
+    <p>Nosso jeito CMPS Luxury de ser.</p>
+    <button><p>Navegar</p></button>
   </div>
   <div class="section">
-    <div class="texts">
-      <h1>UM NOVO CONCEITO</h1>
-      <p>Nosso jeito CMPS Luxury de ser.</p>
-      <button><p>Navegar</p></button>
-    </div>
     <div class="for-all">
       <h1>Para todos</h1>
       <div class="models-img">
-        <div>
-          <img src="../../assets/img/models/new-concept-1.jpg" />
+        <div class="section-img">
+          <img
+            class="taller-img"
+            src="assets/img/models/section-home/new-concept/new-concept-1.jpg"
+          />
+          <div class="button-text">
+            <p class="text">Social</p>
+            <button><p>Ver</p></button>
+          </div>
         </div>
         <div>
-          <img src="../../assets/img/models/new-concept-2.svg" />
-        </div>
-        <div>
-          <img src="../../assets/img/models/new-concept-3.svg" />
+          <div class="section-img">
+            <img
+              src="assets/img/models/section-home/new-concept/new-concept-2.svg"
+            />
+            <button class="button-side first"><p>Ver</p></button>
+          </div>
+          <div class="section-img">
+            <img
+              src="assets/img/models/section-home/new-concept/new-concept-3.svg"
+            />
+            <button class="button-side"><p>Ver</p></button>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="currently-popular">
+      <h1>Populares atualmente</h1>
     </div>
   </div>
 </div>
