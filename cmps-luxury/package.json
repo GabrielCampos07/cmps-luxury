@@ -20,6 +20,7 @@
     "@angular/router": "~12.2.0",
     "@font/nunito": "^1.0.3",
     "rxjs": "~6.6.0",
+    "swiper": "^8.4.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

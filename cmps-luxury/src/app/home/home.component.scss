@@ -137,5 +137,30 @@
         }
       }
     }
+
+    .currently-popular {
+      .item-section {
+        .texts {
+          display: grid;
+          grid-template-columns: 1fr 200px;
+          h3,
+          p {
+            text-align: start;
+          }
+
+          h3 {
+            font-size: 25px;
+            line-height: 34px;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 20px;
+            line-height: 27px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
   }
 }

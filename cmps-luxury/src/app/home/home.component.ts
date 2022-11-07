@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperOptions } from 'swiper';
+import { CurrentlyPopular } from '../shared/interfaces/currently-popular';
+import { NoticesCarousel } from '../shared/interfaces/notices-carousel';
+import { HomeService } from '../shared/services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -6,51 +10,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public sectionImages: any = {};
+  public noticesCarousel: NoticesCarousel[] = [];
+  public sectionCurrentlyPopular: CurrentlyPopular[] = [];
+  public config: SwiperOptions = {
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true,
+  };
 
-  constructor() {
-    this.sectionImages = [
-      {
-        title: 'Vestido Dionysus',
-        gender: 'Feminino',
-        price: 'R$ 2.700,00',
-        image:
-          'assets/img/models/section-home/currently-popular/currently-popular-1.svg',
-      },
-      {
-        title: 'Cardigan Ocasional',
-        gender: 'Feminino',
-        price: 'R$ 1.900,00',
-        image:
-          'assets/img/models/section-home/currently-popular/currently-popular-2.svg',
-      },
-      {
-        title: 'Blusa Inverno',
-        gender: 'Feminino',
-        price: 'R$ 1.200,00',
-        image:
-          'assets/img/models/section-home/currently-popular/currently-popular-3.svg',
-      },
-      {
-        title: 'Vestido Festivo',
-        gender: 'Feminino',
-        price: 'R$ 3.500,00',
-        image:
-          'assets/img/models/section-home/currently-popular/currently-popular-4.svg',
-      },
-      {
-        title: 'Sobretudo Invernal',
-        gender: 'Feminino',
-        price: 'R$ 3.500,00',
-        image:
-          'assets/img/models/section-home/currently-popular/currently-popular-5.svg',
-      },
-    ];
+  constructor(private homeService: HomeService) {}
+
+  ngOnInit(): void {
+    this.getNoticesCarousel();
+    this.getCurretlyPopular();
   }
-
-  ngOnInit(): void {}
 
   public scrollDown(): void {
     window.scrollTo(0, 700);
+  }
+
+  private getNoticesCarousel(): void {
+    this.homeService.getNoticesCarousel().subscribe({
+      next: (noticesCarousel) => {
+        this.noticesCarousel = noticesCarousel;
+      },
+    });
+  }
+
+  private getCurretlyPopular(): void {
+    this.homeService.getCurrentlyPopular().subscribe({
+      next: (currentlyPopular) => {
+        this.sectionCurrentlyPopular = currentlyPopular;
+      },
+    });
   }
 }

@@ -1,8 +1,12 @@
 <div class="container">
-  <div class="notice-carousel">
-    <h1>Produtos com 40% de desconto</h1>
-    <p>Compre agora</p>
-  </div>
+  <swiper [config]="config">
+    <ng-template swiperSlide *ngFor="let notice of noticesCarousel">
+      <div class="notice-carousel">
+        <h1>{{ notice.title }}</h1>
+        <p>{{ notice.subtitle }}</p>
+      </div>
+    </ng-template>
+  </swiper>
   <div class="banner">
     <img class="banner-img" src="assets/img/banner-home.svg" />
     <div class="arrow-down-container">
@@ -50,6 +54,18 @@
     </div>
     <div class="currently-popular">
       <h1>Populares atualmente</h1>
+      <swiper [slidesPerView]="3">
+        <ng-template swiperSlide *ngFor="let item of sectionCurrentlyPopular">
+          <div class="item-section">
+            <img [src]="item.image" [alt]="item.title" />
+            <div class="texts">
+              <h3>{{ item.title }}</h3>
+              <h3 style="text-align: center">{{ item.price }}</h3>
+              <p>{{ item.gender }}</p>
+            </div>
+          </div></ng-template
+        >
+      </swiper>
     </div>
   </div>
 </div>
