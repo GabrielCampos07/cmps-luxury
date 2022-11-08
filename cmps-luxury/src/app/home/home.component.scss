@@ -77,7 +77,6 @@
   }
 
   .section {
-    padding: 0 23px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -88,6 +87,7 @@
     }
 
     .for-all {
+      padding: 0 23px;
       .models-img {
         display: flex;
         gap: 40px;
@@ -139,6 +139,7 @@
     }
 
     .currently-popular {
+      padding: 0 23px;
       .item-section {
         .texts {
           display: grid;
@@ -159,6 +160,105 @@
             line-height: 27px;
             font-weight: 300;
           }
+        }
+      }
+    }
+
+    .dressing-like-u {
+      display: flex;
+      background: linear-gradient(230deg, #e6e6e6, #e5e5e5);
+
+      .banner,
+      .texts-logo {
+        width: 50%;
+      }
+
+      .texts-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 231px;
+        }
+
+        .texts {
+          h1 {
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 61px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+          }
+        }
+      }
+    }
+
+    .luxury-inside {
+      background-color: black;
+      padding: 38px 27px;
+
+      .title-paginator {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        h3 {
+          font-weight: 700;
+          font-size: 41px;
+          line-height: 56px;
+          color: #cccccc;
+        }
+      }
+
+      .img-notice {
+        margin-top: 30px;
+        display: flex;
+        gap: 40px;
+
+        .notice {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 9px;
+
+          h3,
+          h2,
+          p {
+            color: #cccccc;
+          }
+
+          h3,
+          h2 {
+            font-weight: 700;
+          }
+
+          h3 {
+            font-size: 25px;
+            line-height: 34px;
+          }
+
+          h2 {
+            font-size: 30px;
+            line-height: 41px;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 34px;
+          }
+        }
+
+        button {
+          width: 186px;
+          align-self: center;
+          position: absolute;
+          bottom: 0;
         }
       }
     }

@@ -12,18 +12,14 @@ import { HomeService } from '../shared/services/home.service';
 export class HomeComponent implements OnInit {
   public noticesCarousel: NoticesCarousel[] = [];
   public sectionCurrentlyPopular: CurrentlyPopular[] = [];
-  public config: SwiperOptions = {
-    autoplay: {
-      delay: 3000,
-    },
-    loop: true,
-  };
+  public sectionLuxuryInside: any = [];
 
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     this.getNoticesCarousel();
     this.getCurretlyPopular();
+    this.getLuxuryInside();
   }
 
   public scrollDown(): void {
@@ -42,6 +38,14 @@ export class HomeComponent implements OnInit {
     this.homeService.getCurrentlyPopular().subscribe({
       next: (currentlyPopular) => {
         this.sectionCurrentlyPopular = currentlyPopular;
+      },
+    });
+  }
+
+  private getLuxuryInside(): void {
+    this.homeService.getLuxuryInside().subscribe({
+      next: (luxuryInside: any) => {
+        this.sectionLuxuryInside = luxuryInside;
       },
     });
   }

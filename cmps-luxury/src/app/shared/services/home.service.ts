@@ -65,4 +65,33 @@ export class HomeService {
       },
     ]);
   }
+
+  public getLuxuryInside(): any {
+    return of([
+      {
+        img: 'assets/img/banners/home/luxury-inside/luxury-inside-1.svg',
+        title: 'Nova loja',
+        secondTitle: 'CMPS Arena',
+        subtitle:
+          'Experiência definitiva, a CMPS Arena abre suas portas na 50 avenue des Champs-Élysées. Dois mil metros quadrados de diversidade. Espaços exclusivos. Conheça o coração pulsante de todas as culturas CMPS.',
+        textButton: 'Descubra',
+      },
+      {
+        img: 'assets/img/banners/home/luxury-inside/luxury-inside-2.svg',
+        title: '"NÃO NASCEMOS ÚNICOS. NOS TORNAMOS"',
+        secondTitle: 'A Fundação CMPS, 10 anos.',
+        subtitle:
+          'A nossa missão? Fazer da igualdade de oportunidades uma realidade ao apoiar jovens para alcançarem o seu potencial através dos valores de espírito de equipe, perseverança e de superação individual.',
+        textButton: 'Descubra',
+      },
+      {
+        img: 'assets/img/banners/home/luxury-inside/luxury-inside-3.svg',
+        title: 'Novas tendências',
+        secondTitle: 'Novidades desta estação.',
+        subtitle:
+          'Aproveite o calor com o melhor da estilo clima. Underwear, regatas e muito mais excelências estão te aguardando.',
+        textButton: 'Explorar',
+      },
+    ]);
+  }
 }

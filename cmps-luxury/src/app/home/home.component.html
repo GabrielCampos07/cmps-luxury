@@ -1,5 +1,5 @@
 <div class="container">
-  <swiper [config]="config">
+  <swiper [loop]="true">
     <ng-template swiperSlide *ngFor="let notice of noticesCarousel">
       <div class="notice-carousel">
         <h1>{{ notice.title }}</h1>
@@ -54,7 +54,7 @@
     </div>
     <div class="currently-popular">
       <h1>Populares atualmente</h1>
-      <swiper [slidesPerView]="3">
+      <swiper [slidesPerView]="3" [loop]="true">
         <ng-template swiperSlide *ngFor="let item of sectionCurrentlyPopular">
           <div class="item-section">
             <img [src]="item.image" [alt]="item.title" />
@@ -65,6 +65,43 @@
             </div>
           </div></ng-template
         >
+      </swiper>
+    </div>
+    <div class="dressing-like-u">
+      <img
+        src="assets/img/models/section-home/dressing-like-u/dressing-like-u.svg"
+        alt="Vestindo-se igual você"
+        class="banner"
+      />
+      <div class="texts-logo">
+        <img src="assets/img/logo.svg" alt="logo" />
+        <div class="texts">
+          <h1>Vestindo-se igual você</h1>
+          <p>Você é o unico quem dita o que pode vestir.</p>
+          <p>Sinta-se a vontade e descubra o que é seu.</p>
+          <button><p>Descobrir</p></button>
+        </div>
+      </div>
+    </div>
+    <div class="luxury-inside">
+      <div class="title-paginator">
+        <h3>CMPS Luxury Inside</h3>
+        <img src="assets/img/logo-white.svg" alt="logo" />
+      </div>
+      <swiper [loop]="true">
+        <ng-template swiperSlide *ngFor="let item of sectionLuxuryInside">
+          <div class="img-notice">
+            <img [src]="item.img" [alt]="item.title" />
+            <div class="notice">
+              <h3>{{ item.title }}</h3>
+              <h2>{{ item.secondTitle }}</h2>
+              <p>{{ item.subtitle }}</p>
+              <button>
+                <p>{{ item.textButton }}</p>
+              </button>
+            </div>
+          </div>
+        </ng-template>
       </swiper>
     </div>
   </div>
